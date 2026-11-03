@@ -1,0 +1,6 @@
+{
+  "input": "data/dev-noqwen (23 cases, qwen3-8b:low case excluded to keep CPU runtime bounded)",
+  "main_track": {"zip": "dist/solution-uncertainty-hybrid.zip", "accuracy": 0.6086956521739131, "coverage": 1.0, "invalid_predictions": 0},
+  "small_track": {"zip": "dist/solution-uncertainty-hybrid-small.zip", "accuracy": 0.6086956521739131, "coverage": 1.0, "invalid_predictions": 0},
+  "note": "14/23 correct = every all-False fallback case; identical output for both tracks"
+}

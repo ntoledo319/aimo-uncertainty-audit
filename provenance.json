@@ -1,0 +1,54 @@
+{
+  "repository": "https://github.com/aimo-interp/getting-started",
+  "commit": "995f9923a680a157c9239e08e4ef0fa0fa53bb58",
+  "files": {
+    "solution.py": {
+      "upstream_path": "solutions/uncertainty-profiling/solution.py",
+      "upstream_sha256": "a16bce49c631e703d03b7033dc2f206ea0302dd5bcfa24eceeec517a7cf37c74",
+      "submitted_sha256": "b497b46be01c94d730a4951adc5ee7725b4c70833221270323bffb869e8443c7",
+      "changed": true
+    },
+    "uncertainty_artifacts/deepseek-ai_DeepSeek-R1-0528-Qwen3-8B.joblib": {
+      "upstream_path": "solutions/uncertainty-profiling/uncertainty_artifacts/deepseek-ai_DeepSeek-R1-0528-Qwen3-8B.joblib",
+      "upstream_sha256": "bc90bd8eed4d9f6383cbb9ae1626896afea90b0e71c46d9a56bc87d376f85592",
+      "submitted_sha256": "bc90bd8eed4d9f6383cbb9ae1626896afea90b0e71c46d9a56bc87d376f85592",
+      "changed": false
+    },
+    "uncertainty_profile/__init__.py": {
+      "upstream_path": "solutions/uncertainty-profiling/uncertainty_profile/__init__.py",
+      "upstream_sha256": "e6a6044f83d60c86154155754d2d4b979ade9c3ed86a34997c746f9b266493ec",
+      "submitted_sha256": "e6a6044f83d60c86154155754d2d4b979ade9c3ed86a34997c746f9b266493ec",
+      "changed": false
+    },
+    "uncertainty_profile/artifact.py": {
+      "upstream_path": "solutions/uncertainty-profiling/uncertainty_profile/artifact.py",
+      "upstream_sha256": "7191fedd8b1a5374dc81551a58ace7a2469497834c358988c049091bfafecc79",
+      "submitted_sha256": "7191fedd8b1a5374dc81551a58ace7a2469497834c358988c049091bfafecc79",
+      "changed": false
+    },
+    "uncertainty_profile/config.py": {
+      "upstream_path": "solutions/uncertainty-profiling/uncertainty_profile/config.py",
+      "upstream_sha256": "49085a83aad82cbe9ab743de923d1f1d07c2728e78729fe3bc71acf149319430",
+      "submitted_sha256": "49085a83aad82cbe9ab743de923d1f1d07c2728e78729fe3bc71acf149319430",
+      "changed": false
+    },
+    "uncertainty_profile/extraction.py": {
+      "upstream_path": "solutions/uncertainty-profiling/uncertainty_profile/extraction.py",
+      "upstream_sha256": "b3f159faf948bd2525ba0de262bc80942b035d232512b6d27d0906e4917b6614",
+      "submitted_sha256": "c0392b7d82f1ef19a0660e9028970249ac95f33a5b82bca23406b9ded69eba75",
+      "changed": true
+    },
+    "uncertainty_profile/inference.py": {
+      "upstream_path": "solutions/uncertainty-profiling/uncertainty_profile/inference.py",
+      "upstream_sha256": "33070a8b730647892e4efabf7bc49e952e9f1c3df680e392353b0fab9eb66daa",
+      "submitted_sha256": "33070a8b730647892e4efabf7bc49e952e9f1c3df680e392353b0fab9eb66daa",
+      "changed": false
+    },
+    "uncertainty_profile/metrics.py": {
+      "upstream_path": "solutions/uncertainty-profiling/uncertainty_profile/metrics.py",
+      "upstream_sha256": "5d545aeaa2456decce93fb88cb4b0765ce36367c522fa9d9b66dc57273fcabcc",
+      "submitted_sha256": "5d545aeaa2456decce93fb88cb4b0765ce36367c522fa9d9b66dc57273fcabcc",
+      "changed": false
+    }
+  }
+}

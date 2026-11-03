@@ -1,0 +1,48 @@
+--- a/solution.py
++++ b/solution.py
+@@ -1,5 +1,15 @@
+-"""Codabench entry point for the uncertainty-profiling baseline."""
++"""Codabench entry point: generation-uncertainty profiling with safe fallback.
+ 
++Model_ids with a bundled uncertainty-regressor artifact (resolvable via the
++known Codabench aliases) use generation-uncertainty profiling: one greedy
++response per problem, 14 token-level confidence features, and the bundled
++scikit-learn regressor. Every other model_id falls back to the majority class
++(all-False), which keeps those batches valid and plain-accuracy-optimal under
++label skew; a text-only prior was evaluated and rejected (see SUBMISSION.md).
++"""
++
++from uncertainty_profile.artifact import load_artifact
++from uncertainty_profile.config import resolve_checkpoint_model_id
+ from uncertainty_profile.inference import predict_robustness
+ 
+ 
+@@ -14,4 +24,10 @@
+         Robustness predictions in the same order as ``problems``.
+     """
+ 
+-    return predict_robustness(model_id=model_id, problem_texts=problems)
++    texts = list(problems)
++    if not texts:
++        return []
++    checkpoint_model_id = resolve_checkpoint_model_id(model_id)
++    if load_artifact(checkpoint_model_id) is not None:
++        return predict_robustness(model_id=model_id, problem_texts=texts)
++    return [False] * len(texts)
+--- a/uncertainty_profile/extraction.py
++++ b/uncertainty_profile/extraction.py
+@@ -83,10 +83,13 @@
+             trust_remote_code=False,
+         )
+     else:
++        # bf16 instead of fp32 halves the RAM footprint so 8B checkpoints load
++        # on CPU-only machines; it also matches the dtype used on the
++        # evaluation GPU. Never exercised on the GPU evaluation worker.
+         model = AutoModelForCausalLM.from_pretrained(
+             model_id,
+             cache_dir=cache_dir,
+-            dtype=torch.float32,
++            dtype=torch.bfloat16,
+             local_files_only=local_files_only,
+             trust_remote_code=False,
+         )

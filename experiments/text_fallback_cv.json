@@ -1,0 +1,41 @@
+{
+  "candidates": [
+    {
+      "accuracy": 0.5539568345323741,
+      "balanced_accuracy": 0.5093042071197411,
+      "candidate": "dummy_mean",
+      "mae": 0.3385693039232706,
+      "threshold": 0.6175402882882882
+    },
+    {
+      "accuracy": 0.6115107913669064,
+      "balanced_accuracy": 0.6204153182308522,
+      "candidate": "hist_gb",
+      "mae": 0.3596905025281817,
+      "threshold": 0.624906867340925
+    },
+    {
+      "accuracy": 0.5251798561151079,
+      "balanced_accuracy": 0.6525080906148867,
+      "candidate": "random_forest",
+      "mae": 0.34007752988297724,
+      "threshold": 0.7090026002420636
+    },
+    {
+      "accuracy": 0.5971223021582733,
+      "balanced_accuracy": 0.692017259978425,
+      "candidate": "extra_trees",
+      "mae": 0.3410533699448327,
+      "threshold": 0.6640762472333334
+    }
+  ],
+  "rows": 139,
+  "unique_problems": 137,
+  "winner": {
+    "accuracy": 0.5971223021582733,
+    "balanced_accuracy": 0.692017259978425,
+    "candidate": "extra_trees",
+    "mae": 0.3410533699448327,
+    "threshold": 0.6640762472333334
+  }
+}
